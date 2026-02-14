@@ -86,8 +86,17 @@ TE AMO DEMASIADO DANNA.`;
       <div className={`relative z-10 w-full transition-all duration-1000 mx-auto 
         ${unlocked ? 'md:max-w-4xl' : 'max-w-[340px]'}`}> 
         
-        <img src="/kuromi-1.png" className="absolute -top-10 -left-4 sm:-left-6 w-16 h-16 sm:w-20 sm:h-20 object-contain z-30 animate-soft-float" alt="Kuromi 1" />
-        <img src="/kuromi-2.png" className="absolute -bottom-6 -right-4 sm:-right-6 w-16 h-16 sm:w-20 sm:h-20 object-contain z-30 animate-soft-float" style={{ animationDelay: '0.5s' }} alt="Kuromi 2" />
+       <img 
+  src="./kuromi-1.png" 
+  className="absolute -top-10 -left-4 sm:-left-6 w-16 h-16 sm:w-20 sm:h-20 object-contain z-30 animate-soft-float" 
+  alt="Kuromi 1" 
+/>
+<img 
+  src="./kuromi-2.png" 
+  className="absolute -bottom-6 -right-4 sm:-right-6 w-16 h-16 sm:w-20 sm:h-20 object-contain z-30 animate-soft-float" 
+  style={{ animationDelay: '0.5s' }} 
+  alt="Kuromi 2" 
+/>
 
         <div className="bg-[#2d1b2d]/98 backdrop-blur-xl border-2 border-[#5a3b5a] rounded-[2rem] p-4 sm:p-8 shadow-2xl">
           
