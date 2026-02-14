@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Pirata+One&family=UnifrakturMaguntia&family=Playfair+Display:ital,wght@1,700&display=swap');
+@import "tailwindcss";
+
+:root {
+  background-color: #0f0505;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background-image: radial-gradient(circle at center, #2d0a0a 0%, #0f0505 100%);
+  color: #ffebeb;
+  font-family: 'Playfair Display', serif;
+  overflow-x: hidden;
+}
+
+@keyframes gothic-float {
+  0% {
+    transform: translateY(20vh) translateX(0) rotate(0deg) scale(0.6);
+    opacity: 0;
+  }
+  20% { opacity: 0.3; }
+  100% {
+    transform: translateY(-130vh) translateX(var(--random-x)) rotate(var(--random-rotation)) scale(1.2);
+    opacity: 0;
+  }
+}
+
+@keyframes gothic-pulse {
+  0%, 100% { 
+    transform: scale(1); 
+    filter: drop-shadow(0 0 8px rgba(220, 38, 38, 0.2)); 
+  }
+  50% { 
+    transform: scale(1.02); 
+    filter: drop-shadow(0 0 20px rgba(255, 179, 179, 0.4)); 
+  }
+}
+
+@keyframes soft-float {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-12px) rotate(2deg); }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; transform: scale(0.98); filter: blur(8px); }
+  to { opacity: 1; transform: scale(1); filter: blur(0); }
+}
+
+.gothic-symbol {
+  pointer-events: none;
+  position: absolute;
+  z-index: 0;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
+  will-change: transform, opacity;
+}
+
+.animate-gothic-float { animation: gothic-float linear forwards; }
+.animate-gothic-pulse { animation: gothic-pulse 4s infinite ease-in-out; }
+.animate-soft-float { animation: soft-float 5s ease-in-out infinite; }
+.animate-fade-in { animation: fade-in 1.8s cubic-bezier(0.22, 1, 0.36, 1) forwards; }
+
+.custom-scrollbar::-webkit-scrollbar { width: 4px; }
+.custom-scrollbar::-webkit-scrollbar-track { background: transparent; }
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, transparent, rgba(255, 179, 179, 0.3), transparent);
+  border-radius: 20px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover { background: rgba(220, 38, 38, 0.5); }
+
+.custom-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 179, 179, 0.3) transparent;
+}
+
+p { text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8); }
